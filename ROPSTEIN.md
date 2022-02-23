@@ -1,0 +1,37 @@
+# Deployment Details
+
+```
+aaron@raven:~/dev/projects/wax/brawler-erc20-token$ npm run deploy 
+
+> brawler-erc20@1.0.0 deploy /home/aaron/dev/projects/wax/brawler-erc20-token
+> npx oz deploy
+
+Nothing to compile, all contracts are up to date.
+? Choose the kind of deployment upgradeable
+? Pick a network ropsten
+? Pick a contract to deploy BRWLERC20UpgradeSafe
+✓ Linked dependency @openzeppelin/contracts-ethereum-package 3.0.0
+✓ Contract BRWLERC20UpgradeSafe deployed
+All implementations have been deployed
+? Call a function to initialize the instance after creating it? Yes
+? Select which function * initialize(escrow: address)
+? escrow: address: 0xDc63C389e72d9f803f5c8fDe241A11e66E8D6531
+✓ Setting everything up to create contract instances
+✓ Instance created at 0xc353A48b144eA989cC229a4dd1b1d44c1ff84091
+To upgrade this instance run 'oz upgrade'
+0xc353A48b144eA989cC229a4dd1b1d44c1ff84091
+```
+
+And approval for the Bridge Contract:
+
+```
+aaron@raven:~/dev/projects/wax/brawler-erc20-token$ npx oz send-tx
+? Pick a network ropsten
+? Pick an instance BRWLERC20UpgradeSafe at 0xc353A48b144eA989cC229a4dd1b1d44c1ff84091
+? Select which function approve(spender: address, amount: uint256)
+? spender: address: 0x1dbB9924b5b961e671A86EE45Fd949B23aE441C7
+? amount: uint256: 100000000000000
+✓ Transaction successful. Transaction hash: 0x700ed252b999b18279483f9821b898cca17ad39c4fd69641bad6d021cfff8dc6
+Events emitted: 
+ - Approval(0xDc63C389e72d9f803f5c8fDe241A11e66E8D6531, 0x1dbB9924b5b961e671A86EE45Fd949B23aE441C7, 100000000000000)
+```
