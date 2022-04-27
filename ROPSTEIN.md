@@ -35,3 +35,25 @@ aaron@raven:~/dev/projects/wax/brawler-erc20-token$ npx oz send-tx
 Events emitted: 
  - Approval(0xDc63C389e72d9f803f5c8fDe241A11e66E8D6531, 0x1dbB9924b5b961e671A86EE45Fd949B23aE441C7, 100000000000000)
 ```
+
+Upgrade Apr 27:
+
+```
+aaron@raven:~/dev/projects/wax/brawler-erc20-token$ npm run upgrade
+npm run upgrade
+
+> brawler-erc20@1.0.0 upgrade /home/aaron/dev/projects/wax/brawler-erc20-token
+> npx oz upgrade
+
+? Pick a network ropsten
+? Which instances would you like to upgrade? Choose by address
+? Pick an instance to upgrade BRWLERC20UpgradeSafe at 0xc353A48b144eA989cC229a4dd1b1d44c1ff84091
+? Call a function on the instance after upgrading it? No
+Nothing to compile, all contracts are up to date.
+- New variable 'uint256[50] __gap' was added in contract ERC20BurnableUpgradeSafe in @openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:1 at the end of the contract.
+See https://docs.openzeppelin.com/upgrades/2.6//writing-upgradeable#modifying-your-contracts for more info.
+✓ Contract BRWLERC20UpgradeSafe deployed
+All implementations have been deployed
+✓ Instance upgraded at 0xc353A48b144eA989cC229a4dd1b1d44c1ff84091. Transaction receipt: 0x7722342a10bf882b64297ef2c2ec3e336e3f90be249deecd76f47b010c8fb6aa
+✓ Instance at 0xc353A48b144eA989cC229a4dd1b1d44c1ff84091 upgraded
+```

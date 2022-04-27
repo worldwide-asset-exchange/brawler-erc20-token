@@ -1,11 +1,11 @@
 {
   "contracts": {
     "BRWLERC20UpgradeSafe": {
-      "address": "0xDB463FC4cab3A359E31b3C3a6a1d0EC74A139920",
-      "constructorCode": "608060405234801561001057600080fd5b506119bd806100206000396000f3fe",
-      "bodyBytecodeHash": "d3f588dff96aaff5557ed1bc37809f840ff54fc36a384a8438b447e0c9815e74",
-      "localBytecodeHash": "acd4a202a229de159ac1115f182c7ba3ce78e94c8593cb94dd42cf2d1e2987b6",
-      "deployedBytecodeHash": "acd4a202a229de159ac1115f182c7ba3ce78e94c8593cb94dd42cf2d1e2987b6",
+      "address": "0x45a5f0607DFfE453cE759538C989BF7a7F2AA39b",
+      "constructorCode": "608060405234801561001057600080fd5b50611d4c806100206000396000f3fe",
+      "bodyBytecodeHash": "2f2ced11d4deeca429b4641d662099b4bc79d625020a4a04ee0da9944eb12bea",
+      "localBytecodeHash": "45169f4faf30af2d026fceb41a1a06922e47aa9c8e05b541294af4fa18e3e5da",
+      "deployedBytecodeHash": "45169f4faf30af2d026fceb41a1a06922e47aa9c8e05b541294af4fa18e3e5da",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -136,6 +136,14 @@
           "astId": 848,
           "type": "t_array:44<t_uint256>",
           "src": "11045:25:3"
+        },
+        {
+          "contract": "ERC20BurnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol",
+          "label": "__gap",
+          "astId": 929,
+          "type": "t_array:50<t_uint256>",
+          "src": "1443:25:4"
         }
       ],
       "warnings": {
@@ -143,7 +151,22 @@
         "hasSelfDestruct": false,
         "hasDelegateCall": false,
         "hasInitialValuesInDeclarations": false,
-        "uninitializedBaseContracts": []
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [],
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 11,
+              "contract": "ERC20BurnableUpgradeSafe",
+              "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol",
+              "label": "__gap",
+              "astId": 929,
+              "type": "t_array:50<t_uint256>",
+              "src": "1443:25:4"
+            }
+          }
+        ]
       }
     }
   },
@@ -153,7 +176,7 @@
       {
         "address": "0xc353A48b144eA989cC229a4dd1b1d44c1ff84091",
         "version": "1.0.0",
-        "implementation": "0xDB463FC4cab3A359E31b3C3a6a1d0EC74A139920",
+        "implementation": "0x45a5f0607DFfE453cE759538C989BF7a7F2AA39b",
         "admin": "0x58d83b43862598C2420e85aa7488721c0bC84244",
         "kind": "Upgradeable"
       }
