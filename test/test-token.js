@@ -119,5 +119,38 @@ describe('BRWLERC20', function () {
       send.ether(escrow, this.contract.address, '1')
     );
   });
-  
+
+  it('should not be able to burn more than balance', async function() {
+    const amount = new BN('100');
+    await expectRevert(
+      this.contract.burn(amount, { from: user }),
+      'burn amount exceeds balance'
+    );
+  });
+
+  it('should able to burn token', async function() {
+    const amount = new BN('1000000000000000');
+    await this.contract.transfer(user, amount, { from: escrow });
+    await this.contract.burn(amount, { from: user });
+    const totalSupply = await this.contract.totalSupply();
+    const userBalance = await this.contract.balanceOf(user);
+    expect(totalSupply.toString()).to.equal('9000000000000000');
+    expect(userBalance.toString()).to.equal('0');
+  });
+
+  it('should test burnFrom', async function() {
+    const execeedBurnAmount = new BN('1000000');
+    const allowanceAmount = new BN('990000');
+    await this.contract.approve(user, allowanceAmount, { from: escrow });
+    await expectRevert(
+      this.contract.burnFrom(escrow, execeedBurnAmount, { from: user }),
+      'burn amount exceeds allowance'
+    );
+
+    await this.contract.burnFrom(escrow, allowanceAmount, { from: user });
+    const totalSupply = await this.contract.totalSupply();
+    const userAllowance = await this.contract.allowance(escrow, user);
+    expect(totalSupply.toString()).to.equal('9999999999010000');
+    expect(userAllowance.toString()).to.equal('0');
+  });
 });
