@@ -38,8 +38,7 @@ module.exports = {
         )
       },
       networkId: 1,
-      gasPrice: 118e9,
-      gas: 10000000
+      gasPrice: 118e9
     },
     ropsten: {
       provider: () => {
