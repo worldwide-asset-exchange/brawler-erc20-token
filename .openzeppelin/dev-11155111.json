@@ -1,0 +1,182 @@
+{
+  "contracts": {
+    "BRWLERC20UpgradeSafe": {
+      "address": "0xa2118600A058e7e7e2A8632144A88Da32731AE34",
+      "constructorCode": "608060405234801561001057600080fd5b50611d4c806100206000396000f3fe",
+      "bodyBytecodeHash": "2f2ced11d4deeca429b4641d662099b4bc79d625020a4a04ee0da9944eb12bea",
+      "localBytecodeHash": "45169f4faf30af2d026fceb41a1a06922e47aa9c8e05b541294af4fa18e3e5da",
+      "deployedBytecodeHash": "45169f4faf30af2d026fceb41a1a06922e47aa9c8e05b541294af4fa18e3e5da",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_uint8": {
+          "id": "t_uint8",
+          "kind": "elementary",
+          "label": "uint8"
+        },
+        "t_array:44<t_uint256>": {
+          "id": "t_array:44<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "44",
+          "kind": "array",
+          "label": "uint256[44]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 50,
+          "type": "t_bool",
+          "src": "757:24:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 53,
+          "type": "t_bool",
+          "src": "876:25:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 118,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:1"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 43,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:0"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_balances",
+          "astId": 339,
+          "type": "t_mapping<t_uint256>",
+          "src": "1481:46:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_allowances",
+          "astId": 345,
+          "type": "t_mapping<t_uint256>",
+          "src": "1534:69:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_totalSupply",
+          "astId": 347,
+          "type": "t_uint256",
+          "src": "1610:28:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_name",
+          "astId": 349,
+          "type": "t_string",
+          "src": "1645:20:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_symbol",
+          "astId": 351,
+          "type": "t_string",
+          "src": "1671:22:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_decimals",
+          "astId": 353,
+          "type": "t_uint8",
+          "src": "1699:23:3"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "__gap",
+          "astId": 848,
+          "type": "t_array:44<t_uint256>",
+          "src": "11045:25:3"
+        },
+        {
+          "contract": "ERC20BurnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol",
+          "label": "__gap",
+          "astId": 929,
+          "type": "t_array:50<t_uint256>",
+          "src": "1443:25:4"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "brawler-erc20/BRWLERC20UpgradeSafe": [
+      {
+        "address": "0x66d8A3100C3C338B319332f0fd8D155B90AAf6ac",
+        "version": "1.0.0",
+        "implementation": "0xa2118600A058e7e7e2A8632144A88Da32731AE34",
+        "admin": "0x4dFCb3E0c9b69720836F95DB9C40bf299Defe5BB",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": {
+      "package": "0x7b16E5bc52Bc8EDd1D700e2495693a0F1BA47031",
+      "version": "3.0.0",
+      "customDeploy": true
+    }
+  },
+  "proxyAdmin": {
+    "address": "0x4dFCb3E0c9b69720836F95DB9C40bf299Defe5BB"
+  }
+}

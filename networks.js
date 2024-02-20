@@ -51,6 +51,20 @@ module.exports = {
       },
       networkId: 3,
       gasPrice: 10e10
-    }
+    },
+    sepolia: {
+      provider: () => {
+        require('dotenv').config({path: '.env.sepolia'});
+        const projectId = requireEnvVar('PROJECT_ID', 'Infura project id');
+        const mnemonic = requireEnvVar('MNEMONIC', 'HD Wallet mnemonic for deployment');
+        return new HDWalletProvider(
+          mnemonic, 
+          `https://sepolia.infura.io/v3/${projectId}`
+        )
+      },
+      network_id: 11155111,
+      skipDryRun: true,
+      gas: 10000000
+    },
   },
 };
